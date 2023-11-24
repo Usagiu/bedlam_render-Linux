@@ -10,7 +10,7 @@ If you are looking for original code then please visit this repository: https://
 + Create animated [SMPL-X](https://smpl-x.is.tue.mpg.de/) bodies (v1.1, female/male) from SMPL-X animation data files and export in Alembic ABC format. SMPL-X pose correctives are baked in the Alembic geometry cache and will be used in Unreal without any additional software requirements.
 + Details: [blender/smplx_anim_to_alembic/](blender/smplx_anim_to_alembic/)
 + If you wanna create some demo.I think using animations at the path beginning of "rp_" can reduce a lot of problems.
-+ For example: If use "rp_aaron_posed_002". The file format should be "rp_aaron_posed_002/rp_aaron_posed_002_1000.abc file"
++ For example: If use "rp_aaron_posed_002". The file format should be "rp_aaron_posed_002/rp_aaron_posed_002_1000.abc,rp_aaron_posed_002_1001.abc......"
 
 
 ### Data import (Unreal)
