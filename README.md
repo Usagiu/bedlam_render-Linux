@@ -38,13 +38,14 @@ BEDLAM Unreal render setup utilizes a data-driven design approach where external
 + Details: [tools/post_render_pipeline/be_post_render_pipeline.sh](tools/post_render_pipeline/be_post_render_pipeline.sh)
 
 # Requirements
-+ Rendering: [Unreal Engine 5.0.3 for Windows](https://www.unrealengine.com) and good knowledge of how to use it
++ Rendering: [Unreal Engine 5.0.3 for Linux](https://www.unrealengine.com/en-US/linux) and good knowledge of how to use it
 + Data preparation: [Blender](https://www.blender.org) (3.2.2 or later)
 + Windows (10 or later)
     + Data preparation stage will likely also work under Linux or macOS thanks to Blender but we have not tested this and are not providing support for this option
     + Windows WSL2 subsystem for Linux with Ubuntu 22.04
     + [Python for Windows (3.10.2 or later)](https://www.python.org/downloads/windows/)
 + Recommended PC Hardware: 
+  + If you just run lees person demo, I think Any computer with a graphics card can work.
   + CPU: Modern multi-core CPU with high clock speed (Intel i9-12900K)
   + GPU: NVIDIA RTX3090 or higher
   + Memory: 128GB or more
