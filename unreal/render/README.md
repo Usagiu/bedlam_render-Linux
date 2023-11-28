@@ -50,8 +50,7 @@ BEDLAM rendering works with vanilla Unreal Editor 5.0.3 release. Unreal source c
 + Open target Level map
     + It is important to have the Level map open before you try to generate sequences since our LevelSequences depend on Level assets
     + Make sure that the Level contains the following actors from the BEDLAM core assets
-        +  Right-click Scene blank --> Place Actor --> Camera Actor. You can see it on right Details, Rename `BE_CameraRoot`.
-        + `BE_CineCameraActor_Blueprint` attached to empty `BE_CameraRoot` actor(You can Find `BE_CineCameraActor_Blueprint` in Core,click `BE_CameraRoot` drag `BE_CineCameraActor_Blueprint` to `BE_CameraRoot` in Details)
+        + drag `BE_CineCameraActor_Blueprint` to scene anywhere
         + drag `BE_GroundTruthLogger` to scene anywhere
 + Change path in BEDLAM UI to target render folder
     + Example: `C:\bedlam\images\test`(In linux this path will be parse into windows backslash,you can  fill it out,and you should change [create_level_sequences_csv.py](Core/Python/create_level_sequences_csv.py) Line 532, csv_path = your .csv path. i think should delete .csv first line, because in Line 500, it doesn't work!)

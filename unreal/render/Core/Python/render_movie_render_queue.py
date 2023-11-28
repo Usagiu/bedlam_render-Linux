@@ -13,7 +13,8 @@ import sys
 import unreal
 
 # Globals
-output_dir = r"C:\bedlam\images\test"
+
+output_dir = r"/data/image"  
 
 pipeline_executor = None
 
@@ -46,7 +47,7 @@ def OnIndividualJobFinishedCallback(job, success):
     export_camera_data(sequence_name)
 
 def export_camera_data(sequence_name):
-
+    # eg: "/data/image/ground_truth/camera". Path(output_dir) is error should Manual entry
     camera_csv_dir = Path(output_dir) / "ground_truth" / "camera"
     camera_csv_dir.mkdir(parents=True, exist_ok=True)
     camera_csv_path = camera_csv_dir / f"{sequence_name}_camera.csv"
@@ -60,13 +61,13 @@ def export_camera_data(sequence_name):
     (path, logfile_name, ext) = unreal.Paths.split(project_path)
     logfile_path = Path(logfile_dir) / f"{logfile_name}.log"
 
-    with open(logfile_path, "r") as fp:
+    with open(logfile_path, "rb") as fp:
         lines = fp.readlines()
         lines.reverse()
 
         output = []
         for line in lines:
-            line = line.rstrip()
+            line = line.decode("utf-8", errors="ignore")
             if "BEDLAM_CAMERA_START" in line:
                 break
 
